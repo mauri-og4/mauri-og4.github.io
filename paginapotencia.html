@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Presentación de Informes</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: white;
+      text-align: center;
+      background: url("tu-foto.jpg") no-repeat center center fixed;
+      background-size: cover;
+    }
+
+    .overlay {
+      background-color: rgba(0,0,0,0.6);
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .materias {
+      display: flex;
+      gap: 50px;
+    }
+
+    .materia {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px black;
+    }
+
+    .materia h2 {
+      margin-bottom: 15px;
+    }
+
+    .materia a {
+      display: block;
+      color: #ffcc00;
+      text-decoration: none;
+      margin: 5px 0;
+      font-weight: bold;
+    }
+
+    .materia a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <h1>Presentación de Informes</h1>
+    <div class="materias">
+      <div class="materia">
+        <h2>Materia 1</h2>
+        <a href="informe1.pdf" target="_blank">Informe 1</a>
+        <a href="informe2.pdf" target="_blank">Informe 2</a>
+      </div>
+      <div class="materia">
+        <h2>Materia 2</h2>
+        <a href="informe3.pdf" target="_blank">Informe 3</a>
+        <a href="informe4.pdf" target="_blank">Informe 4</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
