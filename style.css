@@ -43,7 +43,7 @@ h1 {
 }
 
 .informe {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .informe h3 {
@@ -58,8 +58,15 @@ h1 {
   color: #f0f0f0;
 }
 
-.informe a {
-  display: inline-block;
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.botones a {
+  flex: 1;
+  text-align: center;
   background: #ffcc00;
   color: black;
   text-decoration: none;
@@ -69,6 +76,6 @@ h1 {
   transition: background 0.3s;
 }
 
-.informe a:hover {
+.botones a:hover {
   background: #ffaa00;
 }
