@@ -1,81 +1,140 @@
+/* =================== ESTILOS GENERALES =================== */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: "Segoe UI", Arial, sans-serif;
   color: white;
-  text-align: center;
   background: url("tu-foto.jpg") no-repeat center center fixed;
   background-size: cover;
 }
 
 .overlay {
-  background-color: rgba(0,0,0,0.6);
+  background-color: rgba(0, 0, 0, 0.55);
   min-height: 100vh;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  backdrop-filter: blur(3px);
 }
 
 h1 {
   font-size: 3rem;
-  margin-bottom: 40px;
-}
-
-.materias {
-  display: flex;
-  gap: 50px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.materia {
-  background: rgba(255, 255, 255, 0.1);
-  padding: 20px 30px;
-  border-radius: 15px;
-  box-shadow: 0 0 10px black;
-  min-width: 300px;
-  max-width: 400px;
-  text-align: left;
-}
-
-.materia h2 {
-  margin-bottom: 20px;
-  color: #ffcc00;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-shadow: 0 0 15px rgba(255,255,255,0.5);
   text-align: center;
 }
 
+/* =================== TITULOS DE SECCIÓN =================== */
+
+h2 {
+  color: #ffd700;
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+  text-shadow: 0 0 10px black;
+  text-align: center;
+}
+
+/* =================== TARJETAS - GLASSMORPHISM =================== */
+
+.materia {
+  background: rgba(255, 255, 255, 0.12);
+  padding: 30px 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+  backdrop-filter: blur(10px);
+  max-width: 950px;
+  width: 100%;
+  margin: 0 auto; /* centra toda la tarjeta */
+}
+
+/* =================== CONTENEDOR DE COLUMNAS (CENTRADO) =================== */
+
+.columnas {
+  display: flex;
+  justify-content: center;     /* Centra horizontalmente */
+  align-items: flex-start;     /* Alinea arriba */
+  gap: 35px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.columna {
+  flex: 1;
+  min-width: 320px;           /* buena proporción */
+  max-width: 420px;           /* evita columnas demasiado grandes */
+}
+
+/* =================== TARJETA DE INFORME =================== */
+
 .informe {
+  background: rgba(255,255,255,0.07);
+  padding: 20px 25px;
+  border-radius: 15px;
   margin-bottom: 25px;
+  backdrop-filter: blur(5px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.informe:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
 }
 
 .informe h3 {
-  margin-bottom: 10px;
-  color: #00e676;
+  margin: 0 0 10px 0;
+  color: #00ff9d;
+  font-size: 1.3rem;
 }
 
 .informe p {
   font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 10px;
-  color: #f0f0f0;
+  color: #e8e8e8;
+  line-height: 1.45;
 }
+
+/* =================== BOTONES =================== */
 
 .botones {
   display: flex;
-  gap: 10px;
-  margin-top: 10px;
+  gap: 12px;
+  margin-top: 12px;
 }
 
 .botones a {
   flex: 1;
-  text-align: center;
-  background: #ffcc00;
-  color: black;
+  padding: 10px 15px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: bold;
-  padding: 8px 15px;
-  border-radius: 8px;
-  transition: background 0.3s;
+  color: black;
+  background: linear-gradient(135deg, #ffd700, #ffae00);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
 .botones a:hover {
-  background: #ffaa00;
+  transform: scale(1.07);
+  box-shadow: 0 0 10px #ffa500;
+}
+
+.botones a:active {
+  transform: scale(0.95);
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.3rem;
+  }
+
+  .materia {
+    padding: 25px;
+  }
+
+  .columna {
+    min-width: 100%;
+  }
 }
