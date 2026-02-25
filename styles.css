@@ -1,0 +1,150 @@
+/* =================== ESTILOS GENERALES =================== */
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color: white;
+  background: url("tu-foto.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* CAPA OSCURA SOBRE LA IMAGEN */
+.overlay {
+  background: rgba(0, 0, 0, 0.65);
+  min-height: 100vh;
+  padding: 60px 20px;
+  backdrop-filter: blur(4px);
+}
+
+/* =================== TITULO PRINCIPAL =================== */
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  color: #00c3ff;
+  text-shadow: 0 0 20px rgba(0,195,255,0.7);
+}
+
+/* =================== TARJETA PRINCIPAL =================== */
+
+.materia {
+  background: rgba(255, 255, 255, 0.10);
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 0 35px rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+
+/* =================== CONTENEDOR DE COLUMNAS =================== */
+
+.columnas {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.columna {
+  flex: 1;
+  min-width: 320px;
+  max-width: 450px;
+}
+
+/* =================== TARJETA DE INFORME =================== */
+
+.informe {
+  background: rgba(255,255,255,0.08);
+  padding: 22px 25px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.15);
+  transition: all 0.3s ease;
+}
+
+.informe:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+  border: 1px solid rgba(0,195,255,0.6);
+}
+
+/* TITULO INFORME */
+.informe h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.3rem;
+  color: #ffd700;
+  text-shadow: 0 0 8px rgba(255,215,0,0.6);
+}
+
+/* DESCRIPCION */
+.informe p {
+  font-size: 0.95rem;
+  color: #e8e8e8;
+  line-height: 1.5;
+}
+
+/* =================== BOTONES =================== */
+
+.botones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.botones a {
+  flex: 1;
+  min-width: 120px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.9rem;
+  color: black;
+  background: linear-gradient(135deg, #00c3ff, #0077ff);
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+/* HOVER */
+.botones a:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 15px #00c3ff;
+}
+
+/* CLICK */
+.botones a:active {
+  transform: scale(0.95);
+}
+
+/* =================== RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  .materia {
+    padding: 25px;
+  }
+
+  .columna {
+    min-width: 100%;
+  }
+
+  .botones {
+    flex-direction: column;
+  }
+
+  .botones a {
+    width: 100%;
+  }
+}
